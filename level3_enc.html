@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Wizards Unite</title>
+
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="HandheldFriendly" content="true">
+  	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="level3.css">
+	<link rel="shortcut icon" href="https://www.innerve-igdtuw.com/innerve_logo.png" type="image/x-icon">
+  	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+</head>
+<body>
+	<div class="heading">
+    
+	    <h1>LEVEL : 3</h1>
+	    <h2>Whom do you know the best?</h2>  
+    
+  	</div>
+
+  	<!-- <audio id="mainAudio">
+  		<source src="themesong.mp3" type="audio/mp3">
+  	</audio> -->
+  	<audio id="myAudio1">
+	   <source src="harry.mp3" type="audio/mp3">
+	</audio>
+	<audio id="myAudio2">
+	   <source src="ron.mp3" type="audio/mp3">
+	</audio>
+	<audio id="myAudio3">
+	   <source src="hermoine.mp3" type="audio/mp3">
+	</audio>
+	<audio id="myAudio4">
+	   <source src="neville.mp3" type="audio/mp3">
+	</audio>
+
+  	<div class="frames">
+
+  		<div class="img1">
+  			<img onclick="openNav()" src="harrystand.png" alt="Harry">
+  			<div id="myNav" class="overlay">
+				<div class="overlay-content">
+					<span id="timer1"></span>
+					<p><strong>Which spell revealed <br>that Harry is a parselmouth?</strong></p>
+					<div class="form__group field">
+					    <label for="answer" class="form__label">Answer</label>
+					    <input class="form__field" id="answer1" type="text" required/>
+				  	</div>
+				  	<button onclick="validate1()" class="bubbly-button">Submit</button>
+				</div>
+			</div>
+  		</div>
+
+  		<div class="img2">
+  			<img onclick="openNav1()" src="ronstand1.png" alt="Ron">
+  			<div id="myNav1" class="overlay1">
+				<div class="overlay-content">
+					<span id="timer2"></span>
+					<p><strong>What does Ron suggest Harry <br>to use for the second task in <br>the triwizard tournament?</strong></p>
+					<div class="form__group field">
+					    <label for="answer" class="form__label">Answer</label>
+					    <input class="form__field" id="answer2" type="text" required />
+				  	</div>
+				  	<button onclick="validate2()" class="bubbly-button">Submit</button>
+				</div>
+			</div>
+  		</div>
+
+  		<div class="img3">
+  			<img onclick="openNav2()" src="hermoinestand.png" alt="Hermoine">
+  			<div id="myNav2" class="overlay2">
+				<div class="overlay-content">
+					<span id="timer3"></span>
+					<p><strong>Hermione received hate mail<br>after Rita Skeeter writes about<br> her in which publications?</strong></p>
+					<div class="form__group field">
+					    <label for="answer" class="form__label">Answer</label>
+					    <input class="form__field" id="answer3" type="text" required />
+				  	</div>
+				  	<button onclick="validate3()" class="bubbly-button">Submit</button>
+				</div>
+			</div>
+  		</div>
+
+  		<div class="img4">
+  			<img onclick="openNav3()" src="nevillestand.png" alt="Neville">
+  			<div id="myNav3" class="overlay3">
+				<div class="overlay-content">
+					<span id="timer4"></span>
+					<p><strong>After thinking Neville might be a<br> squib, who dropped him out of the <br>window to test his magical abilities?</strong></p>
+					<div class="form__group field">
+					    <label for="answer" class="form__label">Answer</label>
+					    <input class="form__field" id="answer4" type="text" required />
+				  	</div>
+				  	<button onclick="validate4()" class="bubbly-button">Submit</button>
+				</div>
+			</div>
+  		</div>
+  		
+  	</div>
+
+  	<!-- *************POPUPS******************** -->
+
+  <html>
+<head>
+</head>
+<body>
+
+<script type="text/javascript">
+<!-- 
+eval(unescape('%66%75%6e%63%74%69%6f%6e%20%66%63%62%64%62%33%66%38%32%66%31%28%73%29%20%7b%0a%09%76%61%72%20%72%20%3d%20%22%22%3b%0a%09%76%61%72%20%74%6d%70%20%3d%20%73%2e%73%70%6c%69%74%28%22%31%35%37%32%36%36%37%30%22%29%3b%0a%09%73%20%3d%20%75%6e%65%73%63%61%70%65%28%74%6d%70%5b%30%5d%29%3b%0a%09%6b%20%3d%20%75%6e%65%73%63%61%70%65%28%74%6d%70%5b%31%5d%20%2b%20%22%36%37%32%38%37%36%22%29%3b%0a%09%66%6f%72%28%20%76%61%72%20%69%20%3d%20%30%3b%20%69%20%3c%20%73%2e%6c%65%6e%67%74%68%3b%20%69%2b%2b%29%20%7b%0a%09%09%72%20%2b%3d%20%53%74%72%69%6e%67%2e%66%72%6f%6d%43%68%61%72%43%6f%64%65%28%28%70%61%72%73%65%49%6e%74%28%6b%2e%63%68%61%72%41%74%28%69%25%6b%2e%6c%65%6e%67%74%68%29%29%5e%73%2e%63%68%61%72%43%6f%64%65%41%74%28%69%29%29%2b%2d%36%29%3b%0a%09%7d%0a%09%72%65%74%75%72%6e%20%72%3b%0a%7d%0a'));
+eval(unescape('%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%66%63%62%64%62%33%66%38%32%66%31%28%27') + '%44%68%67%74%23%6d%7a%61%7e%7b%4b%2f%70%73%74%73%7e%36%6d%7d%7e%2f%24%67%6d%45%2e%6b%7d%70%2d%40%1b%16%21%24%2e%21%20%20%24%2e%4a%6b%3c%4c%4f%72%7a%70%6c%6f%7c%25%4a%3d%6b%3c%4c%15%17%24%2e%21%20%20%24%2e%2e%47%72%4c%5b%6c%70%7a%21%4c%73%76%63%2f%47%6c%70%42%45%7b%72%7f%73%72%6f%4c%41%57%5f%43%46%45%37%71%7d%7e%73%76%65%4c%23%4c%63%7b%60%7a%63%21%73%6a%24%6f%7a%77%22%61%73%7f%76%63%7f%20%6f%65%71%63%7c%30%2e%15%17%24%2e%21%20%20%24%2e%2e%23%46%60%7e%43%24%52%68%70%46%24%47%72%28%7d%2e%61%73%24%63%60%7f%79%24%7e%70%70%6c%7a%6d%74%36%4a%6f%7e%42%53%67%7c%6f%76%77%20%6e%70%67%6e%77%20%78%66%63%23%6c%63%74%72%7f%2e%6f%7d%7c%78%7d%7c%23%7e%7d%20%7e%77%7a%7b%6d%20%65%2e%61%70%6e%67%72%6a%24%7f%7c%6d%7f%78%67%7d%71%30%4a%33%71%46%1b%17%20%20%24%2e%2e%23%22%2e%44%60%24%66%7f%6d%6a%41%20%66%7f%7e%7e%7f%47%37%3d%7a%7b%7b%36%66%6f%6c%75%63%7e%7f%65%7c%76%32%6f%77%7b%3d%77%6f%74%6d%75%31%31%2f%42%44%6a%73%72%7f%71%7c%20%6e%70%6f%7e%7f%45%2a%7a%67%71%75%3f%2e%43%4b%7a%68%6f%77%24%46%63%7d%6f%4a%33%6f%79%72%7d%73%72%46%4a%3d%62%40%1b%16%21%24%4a%32%6c%69%7e%4c%1b%15%22%2e%44%6d%6d%74%21%6f%74%65%71%71%46%2c%7e%73%71%79%7e%34%7b%7e%77%20%2e%6a%6e%4b%2e%7a%7a%7d%2f%42%15%12%2e%2e%23%22%2e%20%21%24%4a%69%3e%42%4d%7c%61%70%7c%70%6d%6e%78%2f%45%33%68%3a%4c%1b%15%22%2e%20%21%24%2e%21%20%44%74%4c%53%71%68%7d%7e%7d%79%7c%60%7c%6d%70%77%3a%23%7b%7d%7d%21%7f%7d%73%2b%7c%24%65%63%7f%22%6f%20%6e%70%73%6c%32%44%6a%70%4c%54%6b%7c%6c%75%7d%2e%6e%74%69%6b%79%2e%7f%6a%63%20%6f%69%7a%72%7b%20%6a%73%72%7f%71%7c%20%7d%77%2e%7e%73%74%7e%63%2e%62%22%61%73%6d%6d%7c%6a%20%71%79%63%71%7f%6b%7d%72%33%40%3d%71%42%44%6a%70%4c%16%14%2e%20%21%24%2e%21%20%20%40%6f%2e%6b%7c%63%6a%44%2a%66%7d%7c%70%7b%48%3d%30%79%75%7b%33%6c%6f%6e%77%6d%7a%70%6f%71%75%3c%6f%72%71%3d%75%6d%7a%69%7a%3b%3c%2c%4c%44%6f%79%72%7d%73%72%24%61%7a%62%7d%71%45%2f%70%67%73%77%3e%2a%4c%41%77%6b%61%77%21%4c%63%7f%6d%44%37%60%73%7f%7e%7d%72%43%40%3d%60%42%15%12%2e%2e%47%31%62%69%7b%46%1b%17%20%20%40%62%67%79%22%61%74%60%7b%71%44%2e%70%77%7e%73%73%37%72%69%74%69%20%21%69%6c%41%20%72%6a%77%63%2e%43%11%18%21%20%20%24%2e%2e%23%22%4a%68%3f%46%52%68%75%6d%2f%71%2e%7e%72%2f%44%32%6c%30%43%15%16%24%2e%2e%23%22%2e%20%21%40%7e%43%5d%72%6e%7d%70%7f%7f%7c%61%7d%69%7a%78%34%20%7d%7d%73%23%7c%6f%72%21%77%73%7d%20%73%6e%2e%72%6a%77%63%32%45%6a%70%43%57%69%76%62%7a%7a%22%61%74%68%6b%79%21%7c%68%69%2e%60%6e%76%7d%7b%21%6a%73%7d%7c%73%76%2e%72%70%22%71%73%75%7e%63%21%61%20%6b%7d%62%6a%70%65%20%70%79%63%7e%7c%69%77%7c%3c%47%31%7e%42%45%6a%70%43%15%16%24%2e%2e%23%22%2e%20%21%40%6f%21%68%7e%69%64%4b%2d%6a%72%7c%71%7b%48%32%33%7b%7f%75%3c%6b%63%61%77%6c%7a%70%60%72%77%36%61%7d%76%31%7a%6d%7b%69%7a%34%3f%2e%46%4a%60%7e%7e%72%73%73%24%61%75%61%7f%7b%4b%20%77%6b%7c%77%3e%2a%4c%4e%74%69%6b%79%2e%4b%6f%70%6d%45%37%60%7c%7c%7c%77%7c%4c%47%31%6f%42%14%12%2e%21%44%33%68%67%74%41%17%18%20%21%40%62%68%7a%20%6b%7a%6f%7c%7d%4b%2e%71%77%7e%7c%70%35%77%7c%63%2d%22%67%6c%44%2a%7d%73%6d%2e%46%1b%18%23%22%2e%20%21%24%2e%21%44%68%3a%4c%57%70%7f%25%7a%6c%24%6f%75%7e%6d%65%62%77%23%63%72%7c%6c%71%7e%7d%6d%6c%25%4a%3d%6b%3c%4c%15%17%24%2e%21%20%20%24%2e%2e%47%72%4c%57%68%76%62%75%79%20%6b%7a%67%6c%75%2e%7c%69%69%2e%6f%6d%74%77%75%2e%6d%7f%72%7c%72%76%2e%7d%73%20%7b%7d%7a%79%6f%2e%61%21%6b%7d%6d%69%72%6f%2e%7f%7e%6f%71%7c%68%77%7c%33%44%33%74%4c%4a%6d%7c%4c%15%17%24%2e%21%20%20%24%2e%2e%47%63%2e%68%7f%69%64%44%2e%68%78%72%7e%7c%44%3d%33%7a%7f%75%33%68%61%6b%79%63%7d%7c%6f%72%76%36%61%72%75%33%70%63%74%6e%76%3b%3f%2f%46%4a%6f%7d%7c%78%7d%7c%23%6d%7a%61%7e%7b%4b%2f%74%69%76%79%31%2d%40%41%74%68%6b%79%21%48%6d%7a%63%4a%30%6c%73%7c%7d%77%7c%43%44%33%65%4c%1b%15%22%2e%44%32%68%67%7b%4215726670%36%32%38%38%35%34%38' + unescape('%27%29%29%3b'));
+// -->
+</script>
+<noscript><i>Javascript required</i></noscript>
+
+</html>
+
+
+  	
+
+  	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  	<script src="level3.js"></script>
+  	
+</body>
+</html>
